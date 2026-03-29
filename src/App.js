@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Expense from "./components/Expenses/Expense";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-const API_URL = "/api/expenses";
+const API_URL = fetch(`${process.env.REACT_APP_API_URL}/api/expenses`);
 
 function App() {
   const [expenses, setExpenses] = useState([]);
