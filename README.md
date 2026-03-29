@@ -19,7 +19,7 @@ A modern full-stack expense tracking application to manage, analyze, and visuali
 - ➕ **Easy Expense Entry** – Add expenses with title, amount, and date
 - 💾 **Persistent Storage** – Data stored securely using MongoDB
 - ⚡ **Fast & Responsive UI** – Built with React for smooth performance
-- 🌙 **Premium Dark Theme** – Modern UI with clean design aesthetics
+- 🌙 **Dark Theme** – Modern UI with clean design aesthetics
 
 ---
 
