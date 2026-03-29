@@ -1,26 +1,54 @@
 .new-expense__controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
+.new-expense__control {
+  flex: 1 1 40%;
+}
+
 .new-expense__control label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
   display: block;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+  font-size: 1rem;
 }
 
 .new-expense__control input {
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  width: 20rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  width: 100%;
   max-width: 100%;
+  background-color: rgba(15, 23, 42, 0.6);
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.new-expense__control input:focus {
+  outline: none;
+  background-color: rgba(15, 23, 42, 0.9);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-glow);
 }
 
 .new-expense__actions {
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .new-expense__control {
+    flex: 1 1 100%;
+  }
 }

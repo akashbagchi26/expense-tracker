@@ -5,27 +5,46 @@ import "./NewExpense.css";
 const NewExpense = (props) => {
   const [formState, setFormState] = useState(false);
 
+  // Automatically show form if editing
+  const isEditing = !!props.editingExpense;
+  const showForm = formState || isEditing;
+
   const saveExpenseDataHandler = (enteredExpenseData) => {
-    const expenseData = {
-      ...enteredExpenseData,
-      id: Math.random().toString(),
-    };
-    props.onAddExpense(expenseData);
+    if (isEditing) {
+      const expenseData = {
+        ...enteredExpenseData,
+        id: props.editingExpense.id,
+      };
+      props.onUpdateExpense(expenseData);
+    } else {
+      const expenseData = {
+        ...enteredExpenseData,
+        id: Math.random().toString(),
+      };
+      props.onAddExpense(expenseData);
+    }
+    setFormState(false);
   };
 
   const onOpenFormHandler = () => {
     setFormState(true);
   };
 
+  const onCancelHandler = () => {
+    setFormState(false);
+    if (isEditing) props.onCancelEdit();
+  };
+
   return (
     <div className="new-expense">
-      {!formState && (
+      {!showForm && (
         <button onClick={onOpenFormHandler}>Add New Expense</button>
       )}
-      {formState && (
+      {showForm && (
         <ExpenseForm
-          closeForm={setFormState}
+          onCancel={onCancelHandler}
           onSaveExpenseData={saveExpenseDataHandler}
+          editingExpense={props.editingExpense}
         />
       )}
     </div>

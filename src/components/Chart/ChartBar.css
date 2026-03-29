@@ -7,10 +7,10 @@
 
 .chart-bar__inner {
   height: 100%;
-  width: 100%;
-  border: 1px solid #313131;
+  width: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  background-color: #c3b4f3;
+  background-color: rgba(30, 41, 59, 0.8);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -18,14 +18,17 @@
 }
 
 .chart-bar__fill {
-  background-color: #4826b9;
+  background: linear-gradient(180deg, var(--accent-cyan), var(--primary));
   width: 100%;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
+  box-shadow: 0 0 10px var(--primary-glow);
 }
 
 .chart-bar__label {
-  font-weight: bold;
-  font-size: 0.6rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
   text-align: center;
-  color: black;
+  margin-top: 0.5rem;
+  color: var(--text-muted);
 }

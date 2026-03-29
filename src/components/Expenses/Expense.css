@@ -1,7 +1,17 @@
 .expenses {
-  padding: 1rem;
-  background-color: rgb(31, 31, 31);
+  padding: 2.5rem;
   margin: 2rem auto;
-  width: 50rem;
-  max-width: 95%;
+  width: 95%;
+  max-width: 55rem;
+  background-color: rgba(30, 41, 59, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: 32px;
+}
+
+@media (max-width: 600px) {
+  .expenses {
+    padding: 1.5rem;
+    width: 98%;
+  }
 }

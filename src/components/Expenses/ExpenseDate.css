@@ -3,24 +3,34 @@
   flex-direction: column;
   width: 5.5rem;
   height: 5.5rem;
-  border: 1px solid #ececec;
-  background-color: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(15, 23, 42, 0.8);
   color: white;
-  border-radius: 12px;
+  border-radius: 16px;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .expense-date__month {
-  font-size: 0.75rem;
-  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.05em;
 }
 
 .expense-date__year {
   font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
 .expense-date__day {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.1;
 }
